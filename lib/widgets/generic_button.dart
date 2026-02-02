@@ -16,3 +16,4 @@ class GenericButton extends StatelessWidget {
     );
   }
 }
+

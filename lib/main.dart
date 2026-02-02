@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:restaurants_app/providers/login_page_provider.dart';
-import 'package:restaurants_app/providers/new_user_page_provider.dart';
-import 'package:restaurants_app/providers/searcher_page_provider.dart';
+import 'package:universidades_app/providers/login_page_provider.dart';
+import 'package:universidades_app/providers/university_page_provider.dart';
 
 import 'pages/login_page.dart';
-import 'pages/new_user.dart';
-import 'pages/searcher.dart';
+import 'pages/home_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,22 +18,17 @@ class MyApp extends StatelessWidget {
           lazy: false,
         ),
         ChangeNotifierProvider(
-          create: (context) => NewUserPageProvider(),
-          lazy: false,
-        ),
-        ChangeNotifierProvider(
-          create: (context) => SearcherPageProvider(),
+          create: (context) => UniversityPageProvider(),
           lazy: false,
         ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Restaurants App',
+        title: 'Universidades App',
         initialRoute: 'login_page',
         routes: {
           'login_page': (_) => const LoginPage(),
-          'new_user_page': (_) => const NewUserPage(),
-          'searcher_page': (_) => const SearcherPage()
+          'home_screen': (_) => const HomePage(),
         },
       ),
     );
