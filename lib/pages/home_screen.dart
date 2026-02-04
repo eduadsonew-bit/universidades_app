@@ -63,7 +63,11 @@ class _HomePageState extends State<HomePage> {
                   title: Text(uni.name),
                   subtitle: Text(uni.country),
                   onTap: () {
-                    print("Seleccionaste: ${uni.name}");
+                    Navigator.pushNamed(
+                      context,
+                      "detail_page",arguments:uni.name
+                    );
+                    //print("Seleccionaste: ${uni.name}");
                   },
                 );
               },
