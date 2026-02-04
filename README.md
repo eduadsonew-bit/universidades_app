@@ -1,4 +1,4 @@
-# restaurants_app
+# universidades_app
 
 A new Flutter project.
 
